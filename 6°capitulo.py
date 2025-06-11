@@ -1,3 +1,4 @@
+# EXERCICIO 6.1 – Gato
 print("EXERCICIO 6.1 – Gato\n")
 gato = {
     "first_name": "Ze",
@@ -90,12 +91,87 @@ print("\n----------------Fim do exercicio----------------\n")
 print("EXERCICIO 6.6– Enquete\n")
 
 favorite_languages = {
-    "salem": "14",
-    "nagine": "23",
-    "tigrezo": "45",
-    "victor": "78",
-    "nina": "10",
+    "salem": "Python",
+    "nagine": "C",
+    "tigrezo": "Java",
+    "victor": "Python",
+    "nina": "C#",
 }
-participou = []
 
-participou.append(favorite_languages.keys())
+pessoas = ["salem", "nagine", "tigrezo", "victor", "nina", "paloma", "patonguinha"]
+
+for pessoa in pessoas:
+    if pessoa in favorite_languages:
+        print(f"{pessoa.title()}, obrigado por ter votado em")
+    else:
+        print(f"{pessoa.title()}, por favor faça sua escolha")
+
+
+print("\n----------------Fim do exercicio----------------\n")
+
+
+# EXERCICIO 6.7 - Pessoas
+print("EXERCICIO 6.7 - Pessoas\n")
+
+tigrezo = {
+    "first_name": "Ze",
+    "last_name": "da Manguinha",
+    "age": "2",
+    "apelido": " tigrezo",
+}
+salem = {
+    "first_name": "salem",
+    "last_name": " de souza",
+    "age": "3",
+    "apelido": " sarem",
+}
+nagine = {
+    "first_name": "nagine",
+    "last_name": " de souza",
+    "age": "3",
+    "apelido": " naguisninha",
+}
+people = [tigrezo, salem, nagine]
+
+for pessoa in people:
+    nome_completo = pessoa["first_name"] + " " + pessoa["last_name"]
+    print(
+        f"Conhecido como{pessoa["apelido"].title()}, mas na verdade seu nome é {nome_completo.title()} e possui apenas {pessoa["age"]} anos de idade"
+    )
+
+print("\n----------------Fim do exercicio----------------\n")
+
+
+# EXERCICIO 6.8 - Animais de estimacao
+print("EXERCICIO 6.8 - Animais de estimacao\n")
+
+mango = {"tipo": "periquito", "dono": "victor"}
+nina = {"tipo": "cachorro", "dono": "paloma"}
+robsun = {"tipo": "gato", "dono": "nagine"}
+
+pets = [mango, nina, robsun]
+
+for pet in pets:
+    print(f"O {pet["tipo"]} é do {pet["dono"].title()}")
+
+print("\n----------------Fim do exercicio----------------\n")
+
+
+# EXERCICIO 6.9 - Lugares favoritos
+print("EXERCICIO 6.9 - Lugares favoritos\n")
+
+favorite_places = {
+    "victor": ["escritorio", "cama", "quintal"],
+    "paloma": ["cama", "sala"],
+    "salem": ["guarda roupa", "sofa", "janela"],
+}
+for pessoa, lugares in favorite_places.items():
+    print(f"\nPara {pessoa.title()} o melhor lugar é: ")
+    for lugar in lugares:
+        print(lugar.title())
+
+print("\n----------------Fim do exercicio----------------\n")
+
+
+# EXERCICIO 6.10 - Numeros favoritos
+print("EXERCICIO 6.10 - Numeros favoritos\n")
