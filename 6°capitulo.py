@@ -175,3 +175,85 @@ print("\n----------------Fim do exercicio----------------\n")
 
 # EXERCICIO 6.10 - Numeros favoritos
 print("EXERCICIO 6.10 - Numeros favoritos\n")
+
+numeroFavorito = {
+    "salem": ["14","15"],
+    "nagine": ["25","45"],
+    "tigrezo": ["02","11"],
+    "victor": ["19","10"],
+    "nina": ["80","02"],
+}
+
+for pessoa, numeros in numeroFavorito.items():
+    print(f"\n O {pessoa} gosta dos numeros:")
+    for numero in numeros:
+        print("\t - " + numero)
+        
+print("\n----------------Fim do exercicio----------------\n")
+
+
+# EXERCICIO 6.11 - Cidades
+print("EXERCICIO 6.11 - Cidades\n")
+
+citties = { 
+    "Brasilia":{
+                "country":"Brasil",
+                "population":"3.094.325",
+                "fact":"Brasília é a capital do Brasil e foi planejada por Lúcio Costa e Oscar Niemeyer."
+                },
+
+    "Betim":{
+            "country":"Brasil",
+            "population":"439.340",
+            "fact":"Betim é um importante polo industrial de Minas Gerais, conhecido pela fábrica da Fiat."
+            },
+
+    "Juatuba":{
+            "country":"Brasil",
+            "population":"27.392",
+            "fact":"Juatuba é uma cidade da Região Metropolitana de Belo Horizonte, conhecida por suas áreas verdes e tranquilidade."
+            }
+}
+
+for cidade, dados in citties.items():
+    print(f"\nCidade: {cidade.title()} ")
+
+    pais = dados['country']
+    populacao = dados['population']
+    info = dados['fact']   
+    print(f"Pais:{pais.title()}")
+    print(f"Populacão: {populacao.title()}")
+    print(f"Info: {info}")
+
+
+print("\n----------------Fim do exercicio----------------\n")
+
+
+# EXERCICIO 6.12 - Extensões
+print("EXERCICIO 6.12 - Extensões\n")
+
+citties = { 
+    "Brasilia":{
+                "country":"Brasil",
+                "population":"3.094.325",
+                "fact":"Brasília é a capital do Brasil e foi planejada por Lúcio Costa e Oscar Niemeyer."
+                },
+
+    "Betim":{
+            "country":"Brasil",
+            "population":"439.340",
+            "fact":"Betim é um importante polo industrial de Minas Gerais, conhecido pela fábrica da Fiat."
+            },
+
+    "Juatuba":{
+            "country":"Brasil",
+            "population":"27.392",
+            "fact":"Juatuba é uma cidade da Região Metropolitana de Belo Horizonte, conhecida por suas áreas verdes e tranquilidade."
+            }
+}
+
+for cidade, dados_cidade in citties.items():
+    print(f"\nCidade: {cidade.title()} ")
+    
+    for dado, info in dados_cidade.items():
+        print(f"{dado.title()} : {info}")
