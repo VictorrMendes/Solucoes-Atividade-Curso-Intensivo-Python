@@ -33,3 +33,50 @@ if numero % 10 == 0:
     print("Esse numero é divisivel por 10")
 else:
     print("Esse numero não é divisivel por 10")
+    
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 7.4 Ingredientes para pizza
+print("EXERCICIO 7.4 Ingredientes para pizza\n")
+
+prompt = ("\nPor favor, digite os ingredientes para a pizza")
+prompt += ("\nDigite 'quit' para encerrar\n")
+
+active = True
+while active:
+    ingrediente = input(prompt)
+
+    if ingrediente == "quit":
+        active = False
+    else:
+        print(f"\nO ingrediente {ingrediente} será adcionado! ")
+        
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 7.5 - Ingressos para cinema
+print("EXERCICIO 5 - Ingressos para cinema")
+
+
+promptNew = "\nDigite sua idade para calculo de valores"
+promptNew += "\nPara sair, digite 'sair' \n"
+
+
+while True:
+    resposta = input(promptNew)
+    
+    if resposta == "sair":
+        print("\nObrigado por participar! Adeus!")
+        break
+
+
+    resposta = int(resposta)
+
+
+    if resposta <= 3:
+        print("\nO seu ingresso é gratis")
+        
+    elif resposta <= 12:
+        print("\nO seu ingresso custa R$10,00 ")
+        
+    elif resposta > 12:
+        print("\nO seu ingresso custa R$15,00")
