@@ -48,3 +48,58 @@ def describe_city(cidade, pais="desconhecido"):
 describe_city("mexico")
 describe_city("Brasilia", "Brasil")
 describe_city("Tokio", "Japão")
+
+
+
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.6 Nomes de cidades
+print("EXERCICIO 8.6 Nomes de cidades")
+
+def city_country(cidade, pais):
+    print(f"{cidade.title()}, {pais.title()}")
+    
+city_country("santiago", "Chile")
+city_country("Argentina", "Mexico")
+city_country("Dinamarca", "peru")
+
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.7 Álbum
+print("EXERCICIO 8.7 Álbum")
+
+def make_album(nome, titulo_album, nFaixas=""):
+    album = { "artista" : nome, "album_titulo": titulo_album}
+    if nFaixas:
+        album["numero_faixas"] = nFaixas
+    
+    
+    return album
+
+print(make_album("victor", "Apaixonado"))
+print(make_album("victor", "voando", "3"))
+print(make_album("victor", "Aprendendo python"))
+print(make_album("victor", "Luxando","2"))
+print(make_album("victor", "Sei la"))
+
+
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.8 Álbuns dos usuários
+print("EXERCICIO 8.8 Álbuns dos usuários")
+
+ativo = True
+while ativo:
+    nArtista = input("Qual o nome do artista? \n Para sair digite q:  ")
+    nAlbum = input("Qual o nome do album? \n Para sair digite q:  ")
+    faixa = input("Se possui um numero de faixas informe, caso não tenha pressione enter \n Para sair digite q: ")
+    
+    if nArtista == "q":
+        break
+    elif nAlbum == "q":
+        break
+    elif faixa == "q":
+            break
+
+    make_album(nArtista,nAlbum,faixa)
+    print(make_album(nArtista,nAlbum,faixa))
