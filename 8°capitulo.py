@@ -103,3 +103,101 @@ while ativo:
 
     make_album(nArtista,nAlbum,faixa)
     print(make_album(nArtista,nAlbum,faixa))
+
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.9 – Mágicos
+print("EXERCICIO 8.9 – Mágicos")
+
+
+magicos = ["Salem","Nagine","Tigrezo"]
+
+def show_magicans(mago):
+    for magico in mago:
+        print(f"O {magico} é um magico")
+        
+show_magicans(magicos)
+
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.10 grandes magicos
+print("EXERCICIO 8.10 grandes magicos")
+
+
+
+def make_great(magicos, master_magic):
+    for mago in magicos:
+        grande = "O grande " + mago
+        master_magic.append(grande)
+    
+master_magic = []
+
+make_great(magicos, master_magic)
+
+for mago in master_magic:
+    print(mago)
+    
+    
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.11- Magicos inaltedados
+print("EXERCICIO 8.11- Magicos inaltedados")
+
+magos = ["Salem","Nagine","Tigrezo"]
+
+def make_great(magos, master_magos):
+    
+    while magos:
+        corrent_mago = magos.pop()
+    
+        alteracao = "O grande " + corrent_mago
+        master_magos.append(alteracao)
+    
+master_magos = []
+
+
+
+make_great(magos[:], master_magos)
+
+print(magos)
+
+print(master_magos)
+
+
+for mago in master_magos:
+    print(mago)
+
+
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.12 - Sanduiches
+print("EXERCICIO 8.12 - Sanduiches")
+
+def sandwich(*acrescimos):
+    print("\n O seu sanduiche vai ter: \n")
+    for item in acrescimos:
+        print(f" - {item}")
+
+    
+sandwich("batata","tomate","uva")
+sandwich("alface","gergilin","couve flor")
+sandwich("oregano")
+
+print("\n----------------Fim do exercicio----------------\n")
+
+# EXERCICIO 8.13 - perfil usuario
+print("EXERCICIO 8.13 - perfil usuario")
+
+def build_profile(first, last, **infoUser):
+    profile = {}
+    profile["first_name"] = first
+    profile["last_name"] = last
+    
+    for key, value in infoUser.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile("victor","mendes",location="casa",idade="50")
+
+print(user_profile)
+
